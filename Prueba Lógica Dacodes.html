@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+	<p>Prueba Lógica</p>
+    <div id="Prueba"></div>
+
+<script type ="text/javascript">
+ dacodes();
+ 
+function dacodes() {
+
+let N=3; //Rows
+let M=3; //Columns
+
+ 
+   for (let i = 0; i < N; i++) {
+		 for (let j = 0; j < M; j++){
+
+			if (N == M && N > 1) {
+				if (N % 2== 0) {
+          salida="L";
+        }
+				else{
+          salida="R";
+        }	
+			}
+			else if (N > M && M > 1) {
+				if (M % 2 == 0) {
+          salida="U";
+        }
+				else{
+          salida="D";
+        }
+			}
+			else if (M > N) {
+				if (N % 2 == 0) {
+          salida="L";
+        }
+				else {
+          salida="R";
+        }
+			}
+			else if (M == 1) {
+				if (N == 1) {
+       salida="R";
+        }
+				else {
+          salida="D";
+        }
+			}
+		}
+	}
+	 document.getElementById("Prueba").innerHTML = salida;
+}
+
+
+</script>
+</body>
+
+</html>
